@@ -7,6 +7,6 @@ import json
 from django.core.serializers import serialize
 class EmployeeDetailCBV(View):
     def get(self,request,*args,**kwargs):
-        emp=Employee.objects.get(id=2)
+        emp=Employee.objects.get(id=3)
         json_data=serialize('json',[emp,])
         return HttpResponse(json_data,content_type='application/json')
