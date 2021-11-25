@@ -39,3 +39,42 @@ function printer(){
 //
 //      document.body.innerHTML = originalContents;
 // }
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ITEM DISPLAY</title>
+    {% load static %}
+
+</head>
+<body>
+    <button>log</button>
+
+<div id="div1">
+    {% csrf_token %}
+    <input name="Itemnumber" id="item">employ_id</input>
+{#    <input type="button" value="Print">#}
+{#    <input type="button" value="Print" onclick="window.print()">#}
+
+    <button id="btn" onclick="printDiv">print</button>
+</div>
+{#    <form>#}
+{#        <input type="button" value="Print"#}
+{#               onclick="window.print()" />#}
+{#    </form>#}
+
+<div id="details">
+
+
+
+</div>
+<input type="checkbox" id="Checklabell" class="chk" onclick="showlabel()">
+<label class="labels" > Bin label </label>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="{% static '/js/index.js' %}"></script>
+</body>
+</html>
